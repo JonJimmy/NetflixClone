@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: black;
+    color: white;
+    
+}
+
+.hero-section {
+    width: 100%;
+    height: 43.75rem;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0.8) 100%), url(Images/Header-image.png);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0rem;
+    margin: 0px 7rem;
+}
+
+.logo {
+    width: 12.5%;
+    min-width: 90px;
+}
+
+.head-button {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+button {
+    padding: 2px 10px;
+    height: 100%;
+}
+
+.b1{
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 0.25rem;
+    outline: 0;
+    background: transparent;
+    color: white;
+    font-size: small;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.b1 select {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    appearance: none;
+}
+
+.b2 {
+    background-color: red ;
+    border: 1px solid red;
+    padding: 4px 16px;
+    font-size: 0.9rem;
+    color: white;
+    border-radius: 0.25rem;
+    margin-left: 10px;
+    height: 100%;
+}
+
+
+
+input {
+    flex: 1;
+    background: transparent;
+    border: 1px solid white;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    place-content: center;
+    max-width: calc(83.33333333333334% - 1rem);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    width: 100%;
+    max-width: 700px;
+}
+
+.hero-content h3 {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.email-signin {
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+   
+    flex-wrap: wrap;
+}
+
+.email-signin input {
+    display: flex;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+    height: 100%;
+}
+
+.email-cont {
+    display: flex;
+    background:  linear-gradient(to top, rgba(0, 0, 0, 0.3) 0, rgba(0, 0, 0, 0.1) 60%, rgba(0, 0, 0, 0.3) 100%), transparent;
+    height: 49px;
+    border: 1px solid #fff;
+    width: 40%;
+    min-width: 389px;
+}
+.email-signin button {
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px;
+    margin-left: 20px;
+    
+}
+
+.email-signin button:hover {
+    background: rgb(133, 2, 2);
+}
+
+.border {
+    height: 4px;
+    width: 100%;
+    background-color: gray;
+    
+}
+
+.feature {
+    margin: 50px 7rem;
+    font-size: 1.5rem;
+    padding: 50px 0;
+}
+
+.feature-row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 50px 0;
+    border: 2px 0px solid gray;
+}
+
+.text-section {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.text-section h2{
+    padding-bottom: 20px;
+    font-size: 3rem;
+}
+
+.img-section {
+    position: relative;
+    height: max-content;
+}
+
+.img-section img {
+    width: 100%;
+    mix-blend-mode: luminosity;
+    object-fit: cover;
+}
+
+.vid {
+    position: absolute;
+    top: 20.5%;
+    left: 13.2%;
+    width: 73%;
+    object-fit: contain;
+}
+
+.questions {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.questions li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.questions li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after {
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.questions .content {
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.questions .content p {
+    padding-bottom: 20px;
+}
+
+.questions input[type="radio"]:checked + label + .content {
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.questions input:checked + label::after {
+    transform: rotate(135deg);
+}
+
+.questions input:checked + label::after + .content {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.foot-content p {
+    text-align: center;
+    font-size: 1rem;
+    
+}
+
+.foot-content {
+    padding-bottom: 20px;
+}
+
+footer {
+    padding-top: 20px;
+    display: block;
+    text-align: left;
+    font-size: 0.7rem;
+    color: rgb(180, 175, 175);
+}
+
+footer h2 {
+    margin: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color:rgb(180, 175, 175);
+    font-size: 0.8rem;
+}
+
+span a {
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+.foot-col {
+    display: flex;
+    justify-content: left;
+    margin: 20px
+}
+
+.foot-row {
+    margin-right: 20px;
+}
+
+.foot-row a{
+    padding-bottom: 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.foot-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.b3 {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 10px;
+    justify-content: space-between;
+    margin: 20px 20px;
+}
+
+.b3 select {
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: white;
+    padding-left: 5px;
+}
+
+footer p {
+    margin: 20px;
+    font-size: 0.8rem;
+    font-weight: 200;
+}
+
+@media screen and (max-width: 1280px) {
+
+    .b1 select {
+        opacity: 0;
+        position: absolute;
+    }
+    .header {
+        margin: 0px 1rem;
+    }
+
+    .hero-section h1{
+        font-size: 2rem;
+    }
+
+    .email-signin {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .email-signin button {
+        margin-top: 1rem;
+    }
+
+    .feature {
+        margin: 0px 1rem;
+    }
+
+    .feature-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .text-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .text-section h2{
+        font-size: 2rem;
+        
+    }
+    .text-section p{
+        font-size: 1.1rem;
+    }
+
+}
